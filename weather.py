@@ -4,8 +4,8 @@ import requests
 
 def get_data():
 
- city=city_name.get()
- data=requests.get("https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=e355fb0cec6fe8bd7293f9b1a0bebe9b").json()
+ city=city_name.get()             #generate your api key for eal time weather report for openweathermap website
+ data=requests.get("https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=YOUR API KEY").json()
 
  w_label1.config(text=data["weather"][0]["main"]) 
  wb_label1.config(text=data["weather"][0]["description"]) 
